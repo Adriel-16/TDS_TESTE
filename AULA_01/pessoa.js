@@ -16,22 +16,36 @@ function ConsultaPessoas(){
     return pessoas;
 }
 
+function DeletePessoa(id){
 
-function delete(){
+    var Retorno = true;
 
+    for(let i = 0; i < pessoas.length; i++){
+        if(pessoas[i].id == id){
+            console.log(pessoas[1]);
+            pessoas.splice(i ,1);
+            return "Deletado com sucesso!";
+        }else{
+           Retorno = false;
+        }
 
+        if (!Retorno) {
+            return "Código da pessoa é inválido!";
+        }
+    }
+}
+
+function consultaID(id) {
+    return pessoas.filter(item => item.id == id);
+}
+
+function atualizaPessoa(id, nome, idade) {
 
 }
 
-//CadastraPessoa("Davi", 20);
-//CadastraPessoa("Adriel", 18);
-//CadastraPessoa("Guilherme", 27);
-
-//console.log(ConsultaPessoas());
-
 module.exports = {
-
     CadastraPessoa,
-    ConsultaPessoas
-    
+    ConsultaPessoas,
+    DeletePessoa,
+    consultaID
 }
