@@ -39,13 +39,30 @@ function consultaID(id) {
     return pessoas.filter(item => item.id == id);
 }
 
-function atualizaPessoa(id, nome, idade) {
+function AtualizaPessoa(id, nome, idade) {
+
+    var teveRetorno = true;
+    for (let i = 0; i < pessoas.length; i++) {
+        if (pessoas[i].id == id) {
+            pessoas[i].nome = nome;
+            pessoas[i].idade = idade;
+            return pessoas[i];
+        } else {
+            teveRetorno = false;
+        }
+    }
+
+    if (!teveRetorno) {
+        return "O código da pessoa é inválido!";
+    }
 
 }
+
 
 module.exports = {
     CadastraPessoa,
     ConsultaPessoas,
     DeletePessoa,
-    consultaID
+    consultaID,
+    AtualizaPessoa
 }
