@@ -1,23 +1,15 @@
 function SomaDeDoisValores(a, b){
-
     return a + b;
-
 }
-
 console.log("O resultado:", SomaDeDoisValores (10, 5));
 
 function Multiplicar(a, b){
-
     return a * b;
-
 }
-
 console.log("O resultado:", Multiplicar (10, 5));
 
 function Divisao(a, b){
-
     return a / b;
-
 }
 
 console.log("O resultado:", Divisao (10, 5));
@@ -46,5 +38,13 @@ const pessoa = {
     id: 1,
     nome: "Adriel",
     idade: 18
+
+}
+
+module.exports = {
+    SomaDeDoisValores,
+    Multiplicar,
+    Divisao,
+
 
 }
