@@ -39,7 +39,7 @@ function consultaID(id) {
     return pessoas.filter(item => item.id == id);
 }
 
-function tualizaPessoa(id, nome, idade) {
+function AtualizaPessoa(id, nome, idade) {
 
     var teveRetorno = true;
     for (let i = 0; i < pessoas.length; i++) {
